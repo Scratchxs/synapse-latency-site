@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse: Latency - Coming Soon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="ANTHEM Logo.png" type="image/png">
+    <!-- Meta tags for SEO and social sharing -->
+    <meta name="description" content="Synapse: Latency - A cyberpunk experience by Anthem Syndicate. Coming soon.">
+    <meta name="keywords" content="Synapse, Latency, Anthem Syndicate, cyberpunk">
+    <meta property="og:title" content="Synapse: Latency - Coming Soon">
+    <meta property="og:description" content="Synapse: Latency - A cyberpunk experience by Anthem Syndicate. Coming soon.">
+    <meta property="og:image" content="ANTHEM Logo.png">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <div class="splash-logo-container">
+            <img src="ANTHEM Logo.png" alt="ANTHEM Logo" class="splash-logo">
+            <div class="splash-logo-text">
+                <span class="splash-text-primary">Synapse</span>
+                <span class="splash-text-secondary">Latency</span>
+            </div>
+        </div>
+        <div class="splash-particles"></div>
+    </div>
+
+    <!-- Main Content (initially hidden) -->
+    <div id="main-content" style="opacity: 0; display: none;">
+        <header>
+            <div class="header-content">
+                <img src="ANTHEM Logo.png" alt="ANTHEM Logo" class="logo">
+                <span class="company-name">ANTHEM SYNDICATE</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="cyber-grid"></div>
+            
+            <div class="main-text-container">
+                <img src="Sofia_Logo2.png" alt="Sofia Logo" class="sofia-logo">
+                <h1 class="glitch-title" data-text="Synapse: Latency">Synapse: Latency</h1>
+                <p class="subtitle">You are the weapon she mistook for a hand.</p>
+                <a href="#" class="neon-button" id="notify-button">Join Beta</a>
+            </div>
+            
+            <!-- Glitch Elements -->
+            <div class="glitch-element" id="glitch-1"></div>
+            <div class="glitch-element" id="glitch-2"></div>
+            <div class="glitch-element" id="glitch-3"></div>
+            
+            <!-- Data Streams -->
+            <div class="data-stream" id="data-stream-1"></div>
+            <div class="data-stream" id="data-stream-2"></div>
+            <div class="data-stream" id="data-stream-3"></div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="about-link"> <!-- Renamed class -->
+                    <a href="#" id="about-trigger">About</a> <!-- Renamed ID and text -->
+                </div>
+                <div class="privacy-link">
+                    <a href="https://privacy.anthem-syndicate.com/" target="_blank">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- About Modal --> <!-- Changed comment -->
+        <div id="about-modal" class="modal"> <!-- Renamed ID -->
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>About</h2> <!-- Changed heading -->
+                <div class="about-content">
+                    <p>Synapse: Latency is currently in development - a real-time psychological horror story where helping someone can hollow them out faster.</p>
+                    <p>Built by a solo developer who knows a thing or two about cracks hiding under polished surfaces.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="particle-container"></div>
+        <div class="scanlines"></div>
+        <div class="crt-flicker"></div>
+        <div class="bottom-gradient"></div> <!-- Added gradient overlay div -->
+    </div>
+
+    <!-- Scripts -->
+    <!-- jQuery (required for some effects) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <!-- GSAP Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/qol.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
