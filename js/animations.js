@@ -1088,8 +1088,6 @@ function triggerEasterEgg(isFirstTime) { // Added isFirstTime argument
 
 
         // *** Add Title Glitch for Subsequent Trigger (already covered by elementsToChange loop) ***
-        // We'll add a separate timeline just for the visual glitch effect on the title itself,
-        // as the text content is already set to "NO NO NO NO".
         let tempSubsequentTitleVisualTl = null;
         if (title && elementsToChange.length > 0 && Array.from(elementsToChange).includes(title)) { // Check if title is part of the changed elements
              tempSubsequentTitleVisualTl = gsap.timeline({ repeat: Math.floor(tempDuration / 0.1), repeatDelay: 0 });
@@ -1102,7 +1100,7 @@ function triggerEasterEgg(isFirstTime) { // Added isFirstTime argument
         // Temporary Particle Glitch (Subsequent Trigger)
         let tempParticleTl = null;
         if (particles.length) {
-            tempParticleTl = gsap.timeline({ repeat: Math.floor(tempDuration / 0.08), repeatDelay: 0 }); // Faster repeat
+            tempParticleTl = gsap.timeline({ repeat: Math.floor(tempDuration / 0.08), repeatDelay: 0 });
             tempParticleTl.to(particles, {
                 x: () => "+=" + (Math.random() * 50 - 25), y: () => "+=" + (Math.random() * 50 - 25),
                 opacity: () => Math.random() * 0.4 + 0.2, duration: 0.04, stagger: 0.003, ease: "steps(1)"
@@ -1112,7 +1110,7 @@ function triggerEasterEgg(isFirstTime) { // Added isFirstTime argument
         // Temporary Grid Glitch (Subsequent Trigger)
         let tempGridTl = null;
         if (grid) {
-            tempGridTl = gsap.timeline({ repeat: Math.floor(tempDuration / 0.08), repeatDelay: 0 }); // Faster repeat
+            tempGridTl = gsap.timeline({ repeat: Math.floor(tempDuration / 0.08), repeatDelay: 0 });
             tempGridTl.to(grid, {
                 backgroundPosition: () => `${Math.random()*100}px ${Math.random()*100}px`, opacity: () => 0.2 + Math.random() * 0.4,
                 filter: 'brightness(1.8) contrast(1.3) hue-rotate(' + (Math.random()*40-20) + 'deg)', duration: 0.04, ease: "steps(1)"
@@ -1123,7 +1121,7 @@ function triggerEasterEgg(isFirstTime) { // Added isFirstTime argument
         // Also glitch header logo if present (make it flicker more intensely)
         let tempHeaderLogoTl = null;
         if (headerLogo) {
-             tempHeaderLogoTl = gsap.timeline({ repeat: Math.floor(tempDuration / 0.06), repeatDelay: 0 }); // Faster repeat
+             tempHeaderLogoTl = gsap.timeline({ repeat: Math.floor(tempDuration / 0.06), repeatDelay: 0 });
              tempHeaderLogoTl.to(headerLogo, { autoAlpha: () => Math.random() * 0.4, duration: 0.03, ease: "steps(1)" });
              tempHeaderLogoTl.to(headerLogo, { autoAlpha: 1, duration: 0.03, ease: "steps(1)" });
         }
@@ -1148,7 +1146,7 @@ function triggerEasterEgg(isFirstTime) { // Added isFirstTime argument
             // Restore original texts and remove red class
             originalTexts.forEach(item => {
                 item.element.textContent = item.text;
-                if (item.dataText !== undefined) { // Restore data-text if it existed
+                if (item.dataText !== undefined) {
                      item.element.dataset.text = item.dataText;
                 }
                  item.element.classList.remove('easter-egg-red');
@@ -1157,7 +1155,7 @@ function triggerEasterEgg(isFirstTime) { // Added isFirstTime argument
             // Explicitly reset styles potentially affected by the temporary glitch
             gsap.set(elementsToChange, { x: 0, y: 0, skewX: 0, opacity: 1 }); // Reset styles for NO NO NO elements
             if (headerLogo) {
-                gsap.set(headerLogo, { autoAlpha: 1 }); // Reset header logo opacity/visibility
+                gsap.set(headerLogo, { autoAlpha: 1 });
             }
 
             // Resume normal (intensified) glitches
