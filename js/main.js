@@ -9,11 +9,9 @@ let sofiaLogoClicks = 0;
 
 // Wait for DOM to be fully loaded
 $(document).ready(function() {
-    console.log('Synapse: Latency - Initializing...');
     
     // Initialize particles
     if (typeof initParticles === 'function') {
-        console.log('Initializing particle system...');
         initParticles();
     } else {
         console.error('Particle system initialization function not found.');
@@ -23,7 +21,6 @@ $(document).ready(function() {
     // Note: animations.js has its own DOMContentLoaded listener,
     // but we call it here as well to ensure proper sequence
     if (typeof initAnimations === 'function') {
-        console.log('Initializing animations...');
         initAnimations();
     } else {
         console.error('Animation initialization function not found.');
@@ -35,7 +32,6 @@ $(document).ready(function() {
     // Initialize cyber grid animation
     initCyberGrid();
     
-    console.log('Synapse: Latency - Initialization complete.');
 });
 
 /**
@@ -50,17 +46,14 @@ function setupEventListeners() {
     
     // Listen for window resize events (particles are handled in particles.js)
     window.addEventListener('resize', debounce(() => {
-        console.log('Window resized, updating layout...');
         // Any additional resize handling can go here
     }, 250));
     
     // Listen for visibility changes to pause/resume animations when tab is inactive
     document.addEventListener('visibilitychange', () => {
         if (document.hidden) {
-            console.log('Page hidden, pausing animations...');
             // Could pause intensive animations here if needed
         } else {
-            console.log('Page visible, resuming animations...');
             // Could resume animations here if needed
         }
     });
@@ -124,14 +117,12 @@ function setupEventListeners() {
     if (sofiaLogo) {
         sofiaLogo.addEventListener('click', () => {
             sofiaLogoClicks++;
-            console.log(`Sofia Logo Clicks: ${sofiaLogoClicks}`); // For debugging
 
             if (sofiaLogoClicks >= 5) { // Check if threshold is met
                 
                 const isFirstTime = !easterEggTriggered; // Check the flag state *before* calling
 
                 // Call the function, passing the determined state
-                console.log(`Threshold reached, calling triggerEasterEgg... (isFirstTime: ${isFirstTime})`);
                 if (typeof triggerEasterEgg === 'function') {
                     triggerEasterEgg(isFirstTime); // Pass the state as an argument
                 } else {
@@ -140,7 +131,6 @@ function setupEventListeners() {
 
                 // Set the global flag *after* the first call is initiated
                 if (isFirstTime) {
-                    console.log('Setting easterEggTriggered flag to true after first call.');
                     easterEggTriggered = true;
                 }
                 
@@ -150,7 +140,6 @@ function setupEventListeners() {
             setTimeout(() => {
                 if (sofiaLogoClicks > 0 && sofiaLogoClicks < 5) {
                      sofiaLogoClicks = 0; // Reset if sequence is broken
-                     console.log('Resetting Sofia Logo clicks due to inactivity.');
                 }
             }, 2000); // Reset after 2 seconds of no clicks
         });

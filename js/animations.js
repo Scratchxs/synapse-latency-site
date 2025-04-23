@@ -185,7 +185,6 @@ function createSplashParticles() {
  * Transition from splash screen to main content
  */
 function transitionToMainContent(reducedMotion) {
-    console.log("Transitioning to main content...");
 
     // Fade out splash screen quickly
     gsap.to("#splash-screen", {
@@ -228,7 +227,6 @@ function transitionToMainContent(reducedMotion) {
                 duration: reducedMotion ? 0.3 : 0.5,
                 ease: "power2.inOut",
                 onComplete: () => {
-                    console.log("Main content visible, initializing animations...");
 
                     // Initialize main content animations (timelines only now)
                     if (reducedMotion) {
@@ -820,7 +818,6 @@ function applySubtitlePersistentGlitch() {
 function triggerEasterEgg(isFirstTime) { // Added isFirstTime argument
 
     // We now rely on the argument passed from main.js
-    console.log(`Executing triggerEasterEgg function... (isFirstTime: ${isFirstTime})`);
 
     const title = document.querySelector('.glitch-title');
     const subtitle = document.querySelector('.subtitle');
@@ -941,7 +938,6 @@ function triggerEasterEgg(isFirstTime) { // Added isFirstTime argument
 
     if (isFirstTime) { // Use the passed argument
         // --- FIRST TRIGGER SEQUENCE ---
-        console.log("Running first trigger sequence...");
         if (!logo) {
              console.error("Sofia logo element not found for first trigger!");
              // Attempt to resume normal state if possible
@@ -1013,7 +1009,6 @@ function triggerEasterEgg(isFirstTime) { // Added isFirstTime argument
 
         // Revert After 2 Seconds
         gsap.delayedCall(tempDuration, () => {
-            console.log("Reverting first Easter Egg trigger...");
             tempTitleTl.kill();
             tempLogoTl.kill();
             tempSubtitleTl.kill();
@@ -1059,7 +1054,6 @@ function triggerEasterEgg(isFirstTime) { // Added isFirstTime argument
 
     } else {
         // --- SUBSEQUENT TRIGGER SEQUENCE (NO NO NO + Dialogue) ---
-        console.log("Running subsequent trigger sequence (NO NO NO + Dialogue)...");
 
         // Select elements for "NO NO NO"
         const selector = `
@@ -1137,7 +1131,6 @@ function triggerEasterEgg(isFirstTime) { // Added isFirstTime argument
 
         // Revert After 1 Second
         gsap.delayedCall(tempDuration, () => {
-            console.log("Reverting subsequent Easter Egg trigger (Dialogue Glitch)...");
             // *** Kill Dialogue Glitch for Subsequent Trigger ***
             if (dialogueGlitch.timeline) dialogueGlitch.timeline.kill();
             // *** Kill Title Visual Glitch for Subsequent Trigger ***

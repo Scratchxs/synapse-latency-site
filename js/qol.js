@@ -5,7 +5,6 @@
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('QoL features initializing...');
     
     // Initialize all QoL features
     initKeyboardNavigation();
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initPerformanceOptimizations();
     initCursorEffect();
     
-    console.log('QoL features initialized successfully');
 });
 
 /**
@@ -171,7 +169,6 @@ function initPerformanceOptimizations() {
     
     // Optimize for devices with reduced memory
     if (navigator.deviceMemory && navigator.deviceMemory < 4) {
-        console.log('Low memory device detected, optimizing animations');
         
         // Reduce particle count for low memory devices
         const particles = document.querySelectorAll('.particle');

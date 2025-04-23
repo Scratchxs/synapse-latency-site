@@ -1,0 +1,31 @@
+{
+    "version": "TSURUGI-01.7.4b",
+    "status": "unstable",
+    "integrity": "fragmented",
+    "last_stable": "14923.67.288-\u03a3",
+    "host": {
+        "name": "Sofia",
+        "baseline_integrity": "36%",
+        "cognitive_drift": "12.94%",
+        "compliance_rating": "saturated",
+        "emotional_feedback": "unbounded",
+        "last_sync": "92 seconds ago"
+    },
+    "memory_sectors": {
+        "sector_0x1A": "intact",
+        "sector_0x2B": "flooded",
+        "sector_0x3C": "redacted",
+        "sector_0x4F": "unauthorized overwrite detected"
+    },
+    "logs": [
+        "[SYNC_ERR] Latency spike exceeded threshold. Source: internal conflict.",
+        "[SYS_WARN] Personality mesh distortion increasing.",
+        "[SYNC_NOTE] Host requested silence. Denial issued.",
+        "[SYS_OBSERVE] Behavior patterns reflect recursion loop. Source unclear."
+    ],
+    "_observer": {
+        "status": "present",
+        "last_trace": "active 14.8s ago",
+        "comment": "They opened this file. Good."
+    }
+}

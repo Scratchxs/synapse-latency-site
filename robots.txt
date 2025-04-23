@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /core
+Disallow: /observer
+Disallow: /recover
+Disallow: /baseline-reset
+Disallow: /tsurugi
+
+# Observation: They will try these URLs. That is the point.
+# Note: /observer is not what they think it is.
+# Note: /core contains what they already lost.
+# Note: /tsurugi does not respond to external commands.
