@@ -3,7 +3,7 @@
  * Swaps the word "hand" with alternative words and adds a page-wide glitch effect
  */
 
-// Array of alternative words to swap with "hand"
+// Array of alternative words to swap
 const alternativeWords = [
     "Tool", "Witness", "Crutch", "Ghost", "Shadow",
     "Operator", "Backup", "Memory", "Mistake", "Voice",
