@@ -15,16 +15,53 @@
     <meta property="og:image" content="ANTHEM Logo.png">
 </head>
 <body>
-    <!-- Splash Screen -->
+    <!-- Cyberpunk Glitch Splash Screen -->
     <div id="splash-screen">
-        <div class="splash-logo-container">
-            <img src="ANTHEM Logo.png" alt="ANTHEM Logo" class="splash-logo">
-            <div class="splash-logo-text">
-                <span class="splash-text-primary">Synapse</span>
-                <span class="splash-text-secondary">Latency</span>
+        <div class="glitch-container">
+            <!-- Glitch Layers -->
+            <div class="glitch-layer"></div>
+            <div class="glitch-layer"></div>
+            <div class="glitch-layer"></div>
+            
+            <!-- Logo Container -->
+            <div class="splash-logo-container">
+                <div class="logo-glitch-wrapper">
+                    <img src="ANTHEM Logo.png" alt="ANTHEM Logo" class="splash-logo">
+                    <img src="ANTHEM Logo.png" alt="ANTHEM Logo" class="splash-logo-glitch splash-logo-glitch-1">
+                    <img src="ANTHEM Logo.png" alt="ANTHEM Logo" class="splash-logo-glitch splash-logo-glitch-2">
+                </div>
+                
+                <div class="splash-logo-text">
+                    <div class="text-glitch-wrapper">
+                        <span class="splash-text-primary">Synapse</span>
+                        <span class="splash-text-primary splash-text-glitch splash-text-glitch-1">Synapse</span>
+                        <span class="splash-text-primary splash-text-glitch splash-text-glitch-2">Synapse</span>
+                    </div>
+                    <div class="text-glitch-wrapper">
+                        <span class="splash-text-secondary">Latency</span>
+                        <span class="splash-text-secondary splash-text-glitch splash-text-glitch-1">Latency</span>
+                        <span class="splash-text-secondary splash-text-glitch splash-text-glitch-2">Latency</span>
+                    </div>
+                </div>
             </div>
+            
+            <!-- Digital Noise -->
+            <div class="digital-noise"></div>
+            
+            <!-- Scan Lines -->
+            <div class="splash-scanlines"></div>
+            
+            <!-- Loading Bar -->
+            <div class="cyber-loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            
+            <!-- Binary Data -->
+            <div class="binary-data"></div>
+            
+            <!-- Particles -->
+            <div class="splash-particles"></div>
         </div>
-        <div class="splash-particles"></div>
     </div>
 
     <!-- Main Content (initially hidden) -->
@@ -105,6 +142,7 @@
     <script src="js/particles.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/qol.js"></script>
+    <script src="js/word-glitch.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
