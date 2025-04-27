@@ -696,12 +696,11 @@ function startFullAnimations() {
     tl.to(".glitch-title", {
         opacity: 1,
         duration: 0.5,
-        ease: "power2.out",
-        onComplete: () => {
-            // Apply glitch animation
-            applyTitleGlitch();
-        }
+        ease: "power2.out"
+        // Removed onComplete, apply glitch immediately after starting animation
     }, "-=0.4");
+    // Apply glitch animation as soon as the title starts animating in
+    applyTitleGlitch();
 
     // Animate subtitle
     tl.to(".subtitle", {
